@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { fetchData } from "./utils/pokemonAPI";
 import CardGrid from "./components/CardGrid";
+import Header from "./components/Header";
 import "./App.css";
 
 function App() {
@@ -14,9 +15,15 @@ function App() {
     loadData();
   }, []);
 
+  const handleRules = () => {
+    alert(
+      "Click on a Pokemon card to increase your score. Don't click the same card twice!"
+    );
+  };
+
   return (
     <>
-      <h1>Pokemon memory game</h1>
+      <Header onShowRules={handleRules} />
       <CardGrid pokemons={images} />
     </>
   );
