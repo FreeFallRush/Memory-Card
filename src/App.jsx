@@ -26,23 +26,28 @@ function App() {
 
   const handleCardClick = (name) => {
     if (clicked.includes(name)) {
+      if (score > bestScore) {
+        setBestScore(score);
+      }
+
       setScore(0);
       setClicked([]);
     } else {
       const newScore = score + 1;
       setScore(newScore);
       setClicked([...clicked, name]);
-
-      if (newScore > bestScore) {
-        setBestScore(newScore);
-      }
     }
 
     setImages((prev) => shuffleArray([...prev]));
   };
 
   const shuffleArray = (array) => {
-    return array.sort(() => Math.random() - 0.5);
+    let newArr = [...array];
+    for (let i = newArr.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [newArr[i], newArr[j]] = [newArr[j], newArr[i]];
+    }
+    return newArr;
   };
 
   return (
