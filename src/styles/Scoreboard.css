@@ -1,0 +1,10 @@
+.scoreboard {
+  display: flex;
+  justify-content: center;
+  padding: 1rem 0;
+  gap: 25px;
+  font-size: 26px;
+  color: blanchedalmond;
+  font-weight: bold;
+  background-color: #000000;
+}
