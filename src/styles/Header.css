@@ -10,26 +10,8 @@ h1 {
   font-size: 36px;
 }
 
-.rules-btn {
-  padding: 10px 20px;
-  background-color: #fafa8b;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  font-weight: bold;
-}
-
-.rules-btn:hover {
-  background-color: #ffff67;
-  color: blueviolet;
-}
-
 @media (max-width: 768px) {
   h1 {
     font-size: 20px;
-  }
-
-  .rules-btn {
-    margin-top: 0;
   }
 }
