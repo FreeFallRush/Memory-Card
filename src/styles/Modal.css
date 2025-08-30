@@ -18,3 +18,15 @@
   max-width: 400px;
   text-align: center;
 }
+
+.modal-content h2 {
+  margin-bottom: 20px;
+}
+
+.modal-body {
+  margin-bottom: 20px;
+}
+
+.modal-content button {
+  margin-top: 20px;
+}
