@@ -79,9 +79,25 @@ function App() {
       <CardGrid pokemons={images} onCardClick={handleCardClick} />
       <Modal isOpen={isRulesOpen} onClose={handleCloseRules}>
         <h2>Game Rules</h2>
-        <p>Click on a Pokemon card.</p>
-        <p>To get points, make sure you click each pokemon card only once.</p>
-        <p>Clicking a card twice will reset the score.</p>
+        <ul>
+          <li>Click on a Pokemon card: To start playing, click any card.</li>
+          <li>
+            To get points, make sure you click each pokemon card only once.
+          </li>
+          <p>
+            {" "}
+            If you click a card twice, the game ends, and your best score is
+            displayed.
+          </p>
+          <li>
+            Play Again: After the game is over, you can play again by clicking
+            "Play Again."
+          </li>
+          <li>
+            Reset Best Score: If you want to start over with a new best score,
+            click "Reset Best Score."
+          </li>
+        </ul>
         <Button onClick={handleCloseRules}>Close</Button>
       </Modal>
 

@@ -16,7 +16,6 @@
   padding: 20px 30px;
   border-radius: 8px;
   max-width: 400px;
-  text-align: center;
 }
 
 .modal-content h2 {
@@ -24,9 +23,15 @@
 }
 
 .modal-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-body li {
   margin-bottom: 20px;
 }
 
-.modal-content button {
+.modal-body button {
   margin-top: 20px;
+  text-align: center;
 }
