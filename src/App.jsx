@@ -80,7 +80,10 @@ function App() {
       <Modal isOpen={isRulesOpen} onClose={handleCloseRules}>
         <h2>Game Rules</h2>
         <ul>
-          <li>Click on a Pokemon card: To start playing, click any card.</li>
+          <li>
+            <strong>Click on a Pokemon card: </strong>To start playing, click
+            any card.
+          </li>
           <li>
             To get points, make sure you click each pokemon card only once.
           </li>
