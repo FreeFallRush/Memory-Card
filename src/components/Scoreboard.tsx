@@ -1,6 +1,11 @@
 import "../styles/Scoreboard.css";
 
-function Scoreboard({ score, bestScore }) {
+interface ScoreboardProps {
+  score: number;
+  bestScore: number;
+}
+
+function Scoreboard({ score, bestScore }: ScoreboardProps) {
   return (
     <div className="scoreboard">
       <p>Score: {score}</p>
