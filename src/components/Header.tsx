@@ -1,7 +1,11 @@
 import Button from "./Button";
 import "../styles/Header.css";
 
-function Header({ onShowRules }) {
+interface HeaderProps {
+  onShowRules: () => void;
+}
+
+function Header({ onShowRules }: HeaderProps) {
   return (
     <header>
       <h1>Pokemon Memory Game</h1>
