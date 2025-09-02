@@ -6,7 +6,7 @@ Project: Memory Card - from [The Odin Project - React Curriculum](https://www.th
 
 ## Description
 
-This is a simple memory game built with React. The objective of the game is to click on Pokemon cards without repeating any. The game keeps track of your score and the highest score achieved. Upon clicking a card twice, the game resets and shows your best score. You can choose to play again or reset your best score.
+This is a simple memory game built with React and TypeScript. The objective of the game is to click on Pokemon cards without repeating any. The game keeps track of your score and the highest score achieved. Upon clicking a card twice, the game resets and shows your best score. You can choose to play again or reset your best score.
 
 ## Features
 
@@ -31,7 +31,7 @@ To run the project locally, follow these steps:
 2. Navigate into the project folder:
 
    ```bash
-   cd pokemon-memory-game
+   cd Memory-Card
    ```
 
 3. Install dependencies:
@@ -42,7 +42,7 @@ To run the project locally, follow these steps:
 
 4. Run the development server:
    ```bash
-   npm start
+   npm run dev
    ```
 
 ## Usage
@@ -56,6 +56,7 @@ To run the project locally, follow these steps:
 ## Technologies Used
 
 - **React**: JavaScript library for building user interfaces.
+- **TypeScript**: Superset of JavaScript for type safety and improved developer experience.
 - **CSS**: Used for styling the components and layouts.
 - **useState & useEffect**: React hooks for managing state and side effects.
 - **Pokemon API**: Used to fetch images of Pokemon for the game cards.
