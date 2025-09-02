@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import { fetchData } from "./utils/pokemonAPI.ts";
-import { Pokemon } from "./types/types.ts";
+import { fetchData } from "./utils/pokemonAPI";
+import { Pokemon } from "./types/types";
 
 import Header from "./components/Header";
 import Scoreboard from "./components/Scoreboard";
@@ -15,7 +15,7 @@ function App() {
   const [isGameOver, setIsGameOver] = useState(false);
   const [score, setScore] = useState(0);
   const [bestScore, setBestScore] = useState(0);
-  const [clicked, setClicked] = useState([]);
+  const [clicked, setClicked] = useState<string[]>([]);
 
   useEffect(() => {
     async function loadData() {
@@ -28,7 +28,7 @@ function App() {
   const handleOpenRules = () => setIsRulesOpen(true);
   const handleCloseRules = () => setIsRulesOpen(false);
 
-  const handleCardClick = (name) => {
+  const handleCardClick = (name: string) => {
     if (clicked.includes(name)) {
       setIsGameOver(true);
 
@@ -51,7 +51,7 @@ function App() {
     setImages((prev) => shuffleArray([...prev]));
   };
 
-  const shuffleArray = (array) => {
+  const shuffleArray = (array: Pokemon[]): Pokemon[] => {
     let newArr = [...array];
     for (let i = newArr.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
