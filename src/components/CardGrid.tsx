@@ -1,7 +1,13 @@
 import Card from "./Card";
 import "../styles/CardGrid.css";
+import { Pokemon } from "../types/types";
 
-function CardGrid({ pokemons, onCardClick }) {
+interface CardGridProps {
+  pokemons: Pokemon[];
+  onCardClick: (name: string) => void;
+}
+
+function CardGrid({ pokemons, onCardClick }: CardGridProps) {
   return (
     <div className="card-grid-container">
       <div className="card-grid">

@@ -1,15 +1,16 @@
 import { useEffect, useState } from "react";
-import { fetchData } from "./utils/pokemonAPI";
+import { fetchData } from "./utils/pokemonAPI.ts";
+import { Pokemon } from "./types/types.ts";
 
 import Header from "./components/Header";
 import Scoreboard from "./components/Scoreboard";
 import CardGrid from "./components/CardGrid";
 import Modal from "./components/Modal";
-import Button from "./components/Buttont";
+import Button from "./components/Button";
 import "./App.css";
 
 function App() {
-  const [images, setImages] = useState([]);
+  const [images, setImages] = useState<Pokemon[]>([]);
   const [isRulesOpen, setIsRulesOpen] = useState(false);
   const [isGameOver, setIsGameOver] = useState(false);
   const [score, setScore] = useState(0);
